@@ -1,0 +1,32 @@
+.vh-80 {
+    height: 80vh;
+}
+
+.btn-green {
+    background-color: #00b894;
+    color: white;
+}
+
+.btn-green:hover {
+    background-color: #00a885;
+    color: white;
+}
+
+.btn-green:active {
+    background-color: #00a885;
+    color: white;
+}
+
+.btn-green:focus {
+    background-color: #00a885;
+    color: white;
+}
+.btn-green-outline {
+    background-color: transparent;
+    color: #00b894;
+    border: 1px solid #00b894;
+}
+.btn-green-outline:hover {
+    background-color: #00b894;
+    color: white;
+}
