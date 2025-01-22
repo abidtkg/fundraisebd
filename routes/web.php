@@ -11,6 +11,7 @@ Auth::routes();
 
 // WEB PAGE ROUTES
 Route::get('/', [WebpageController::class, 'index'])->name('webpage.index');
+Route::get('/contact', [WebpageController::class, 'contact'])->name('webpage.contact');
 Route::get('/profile', [WebpageController::class, 'profile'])->middleware([UserGuard::class])->name('webpage.profile');
 
 

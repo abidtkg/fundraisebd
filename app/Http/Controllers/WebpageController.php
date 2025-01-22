@@ -12,6 +12,11 @@ class WebpageController extends Controller
         return view('web.index');
     }
 
+    public function contact()
+    {
+        return view('web.contact');
+    }
+
     public function profile()
     {
         $user = Auth::user();
