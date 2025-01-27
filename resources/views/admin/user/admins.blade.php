@@ -27,22 +27,26 @@
             <thead>
                 <tr>
                     <th style="width: 10px">#</th>
-                    <th>Task</th>
-                    <th>Progress</th>
-                    <th style="width: 40px">Label</th>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Role</th>
+                    <th>Action</th>
                 </tr>
             </thead>
             <tbody>
+                @foreach ($admins as $admin)
                 <tr>
-                    <td>1.</td>
-                    <td>Update software</td>
+                    <td>{{ $admin->id }}</td>
+                    <td>{{ $admin->name }}</td>
+                    <td>{{ $admin->email }}</td>
+                    <td>{{ $admin->role }}</td>
+                    <td>{{ date('d M Y', strtotime($admin->created_at)) }}</td>
                     <td>
-                        <div class="progress progress-xs">
-                            <div class="progress-bar progress-bar-danger" style="width: 55%"></div>
-                        </div>
+                        <a href="#" class="btn btn-sm btn-primary"><i class="fas fa-edit"></i></a>
+                        <a onclick="return confirm('Are you sure?')" href="{{ route('admin.admin.delete', $admin->id) }}" class="btn btn-sm btn-danger"><i class="fas fa-trash"></i></a>
                     </td>
-                    <td><span class="badge bg-danger">55%</span></td>
                 </tr>
+                @endforeach
             </tbody>
         </table>
     </div>

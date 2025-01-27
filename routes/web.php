@@ -32,6 +32,8 @@ Route::prefix('admin')->name('admin.')->middleware([AdminGuard::class])->group(f
     // ADMIN MANGEMENT
     Route::get('/admins', [UserController::class, 'admins'])->name('admin.index');
     Route::get('/admin/create', [UserController::class, 'create_admin'])->name('admin.create');
+    Route::post('/admin/store', [UserController::class, 'store_admin'])->name('admin.store');
+    Route::get('/admin/delete/{id}', [UserController::class, 'delete_admin'])->name('admin.delete');
 });
 
 // REDIRECTED IF TYPED ONLY [/ADMIN] IN URL BAR
