@@ -27,5 +27,18 @@
                 </li>
             </ul>
         </div>
+        <ul class="order-1 order-md-3 navbar-nav navbar-no-expand ml-auto">
+            @auth
+                @if(Auth::user()->role == 'admin')
+                    <li class="nav-item">
+                        <a href="{{ route('admin.dashboard') }}" class="btn btn-info">Dashboard</a>
+                    </li>
+                @endif
+            @endauth
+
+            @guest
+                <a href="{{ route('login') }}" class="btn btn-info">Login</a>
+            @endguest
+        </ul>
     </div>
 </nav>

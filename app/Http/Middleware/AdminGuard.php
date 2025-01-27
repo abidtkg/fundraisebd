@@ -19,7 +19,8 @@ class AdminGuard
         if(Auth::user()->role == 'admin'){
             return $next($request);   
         }else {
-            return redirect()->route('home');
+            Auth::logout();
+            return redirect()->route('login')->with('error', 'You do not have admin access');
         }
     }
 }

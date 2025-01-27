@@ -15,9 +15,14 @@ Route::get('/contact', [WebpageController::class, 'contact'])->name('webpage.con
 Route::get('/profile', [WebpageController::class, 'profile'])->middleware([UserGuard::class])->name('webpage.profile');
 
 
-Route::get('/home', function() {
-    return redirect()->route('webpage.profile');
-})->name('home');
+Route::get('/auth_land', function() {
+    if(Auth::user()->role == 'admin'){
+        return redirect()->route('admin.dashboard');
+    }else {
+        Auth::logout();
+        return redirect()->route('login')->with('error', 'You do not have admin access');
+    }
+});
 
 
 Route::prefix('admin')->name('admin.')->middleware([AdminGuard::class])->group(function() {

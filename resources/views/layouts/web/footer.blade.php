@@ -1,61 +1,41 @@
-<div class="mt-5"></div>
-<hr>
 <div class="container">
-    <footer class="">
+    <footer class="pt-4 my-md-5 pt-md-5 border-top">
         <div class="row">
-            <div class="col-6 col-md-2 mb-3">
-                <h5>Section</h5>
-                <ul class="nav flex-column">
-                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Home</a></li>
-                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Features</a></li>
-                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Pricing</a></li>
-                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">FAQs</a></li>
-                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">About</a></li>
+            <div class="col-12 col-md">
+                <img class="mb-2" src="{{ asset('assets/images/logo.png') }}" alt="" style="height: 45px; width: auto;">
+                <p><b>"Fund Raise BD"</b> is a non-profit organization. Our main goal is to establish a simple and digital connection between donors and fund collectors.</p>
+                <small class="d-block mb-3 text-muted"> &copy; 2025 FundRaiseBD All Rights Reserved </small>
+            </div>
+            <div class="col-6 col-md">
+                <h5>Donate</h5>
+                <ul class="list-unstyled text-small">
+                    <li><a class="text-muted" href="#">Categories</a></li>
+                    <li><a class="text-muted" href="#">Crisis Relief</a></li>
+                    <li><a class="text-muted" href="#">Social Impact Funds</a></li>
+                    <li><a class="text-muted" href="#">Supporter Space</a></li>
                 </ul>
             </div>
-            
-            <div class="col-6 col-md-2 mb-3">
-                <h5>Section</h5>
-                <ul class="nav flex-column">
-                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Home</a></li>
-                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Features</a></li>
-                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Pricing</a></li>
-                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">FAQs</a></li>
-                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">About</a></li>
+            <div class="col-6 col-md">
+                <h5>Fundraise</h5>
+                <ul class="list-unstyled text-small">
+                    <li><a class="text-muted" href="#">Start A Fundraising</a></li>
+                    <li><a class="text-muted" href="#">Fundraising Categories</a></li>
+                    <li><a class="text-muted" href="#">Fundraising Blog</a></li>
+                    <li><a class="text-muted" href="#">Charity Fundraising</a></li>
                 </ul>
             </div>
-            
-            <div class="col-6 col-md-2 mb-3">
-                <h5>Section</h5>
-                <ul class="nav flex-column">
-                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Home</a></li>
-                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Features</a></li>
-                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Pricing</a></li>
-                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">FAQs</a></li>
-                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">About</a></li>
+            <div class="col-6 col-md">
+                <h5>About</h5>
+                <ul class="list-unstyled text-small">
+                    <li><a class="text-muted" href="#">About FundRaiseBD</a></li>
+                    @guest
+                    <li><a class="text-muted" href="{{ route('login') }}">Login Portal</a></li>
+                    @endguest
+                    <li><a class="text-muted" href="{{ route('webpage.contact') }}">Contact</a></li>
+                    <li><a class="text-muted" href="#">Privacy Policy</a></li>
+                    <li><a class="text-muted" href="#">Terms & Conditons</a></li>
                 </ul>
             </div>
-            
-            <div class="col-md-5 offset-md-1 mb-3">
-                <form>
-                    <h5>Subscribe to our newsletter</h5>
-                    <p>Monthly digest of what's new and exciting from us.</p>
-                    <div class="d-flex flex-column flex-sm-row w-100 gap-2">
-                        <label for="newsletter1" class="visually-hidden">Email address</label>
-                        <input id="newsletter1" type="text" class="form-control" placeholder="Email address">
-                        <button class="btn btn-green" type="button">Subscribe</button>
-                    </div>
-                </form>
-            </div>
-        </div>
-        
-        <div class="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top">
-            <p> {{ date('Y') }} {{ config('app.name') }}, All rights reserved.</p>
-            <ul class="list-unstyled d-flex">
-                <li class="ms-3"><a class="link-body-emphasis" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#twitter"></use></svg></a></li>
-                <li class="ms-3"><a class="link-body-emphasis" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#instagram"></use></svg></a></li>
-                <li class="ms-3"><a class="link-body-emphasis" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#facebook"></use></svg></a></li>
-            </ul>
         </div>
     </footer>
 </div>
