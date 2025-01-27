@@ -37,13 +37,13 @@
                         </p>
                     </a>
                 </li>
-                <li class="nav-header">Access Settings</li>
+                <li class="nav-header">Settings</li>
                 
                 <li class="nav-item">
-                    <a href="#" class="nav-link {{ request()->routeIs('portal.gallery*') ? 'active' : '' }}">
-                        <i class="nav-icon fas fa-camera"></i>
+                    <a href="{{ route('admin.admin.index') }}" class="nav-link {{ request()->routeIs('admin.admin.index') ? 'active' : '' }}">
+                        <i class="nav-icon fas fa-users-cog"></i>
                         <p>
-                            Gallery
+                            Admins
                             {{-- <span class="right badge badge-danger">New</span> --}}
                         </p>
                     </a>

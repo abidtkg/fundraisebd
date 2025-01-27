@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\admin\DashboardController;
+use App\Http\Controllers\admin\UserController;
 use App\Http\Controllers\WebpageController;
 use App\Http\Middleware\AdminGuard;
 use App\Http\Middleware\UserGuard;
@@ -27,6 +28,10 @@ Route::get('/auth_land', function() {
 
 Route::prefix('admin')->name('admin.')->middleware([AdminGuard::class])->group(function() {
     Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
+
+    // ADMIN MANGEMENT
+    Route::get('/admins', [UserController::class, 'admins'])->name('admin.index');
+    Route::get('/admin/create', [UserController::class, 'create_admin'])->name('admin.create');
 });
 
 // REDIRECTED IF TYPED ONLY [/ADMIN] IN URL BAR
